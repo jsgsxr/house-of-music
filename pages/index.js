@@ -21,12 +21,6 @@ export default function Home() {
         <meta name="description" content="Meet Local Musicians" />
         <link rel="icon" href="/favicon.ico" />
 
-        {/* firebase init */}
-        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
       </Head>
       <main>
         {session ? (
