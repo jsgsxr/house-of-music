@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { signIn, signOut, getSession } from "next-auth/client";
-import Image from 'next/image'
+import { signOut, getSession } from "next-auth/client";
+import Link from 'next/link'
+import Layout from '../components/layouts';
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);
@@ -15,18 +16,19 @@ export const getServerSideProps = async (context) => {
 export default function Home({ session }) {
 
   return (
-    <div className="loginMain">
+    <Layout className="loginMain">
       <Head>
         <title>House of Music - Login or Sign Up!</title>
         <meta name="description" content="Meet Local Musicians" />
         <link rel="icon" href="/favicon.ico" />
-
       </Head>
       <main>
         {session ? (
           <button onClick={() => signOut()}>Sign out</button>
         ) : (
-          <button onClick={() => signIn()}>Sign in</button>
+          <Link href="/signin">
+            <button>Sign in</button>
+          </Link>
         )}
         {session && (
           <div>
@@ -35,6 +37,6 @@ export default function Home({ session }) {
           </div>
         )}
       </main>
-    </div>
+    </Layout>
   )
 }

@@ -1,11 +1,10 @@
 import styles from '../styles/layout.module.css'
+import Header from '../components/header/Header'
 
 export default function Layout({ children, page }) {
   return (
     <div className={styles.root}>
-      <header className={styles.header}>
-
-      </header>
+      <Header />
       <main className={page}>{children}</main>
       <footer>
 
