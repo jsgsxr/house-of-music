@@ -37,7 +37,7 @@ export default function Home() {
           <div>
             <p>Signed in as {session.user.email}</p>
             <p>Name {session.user.name}</p>
-            <img src={session.user.image} alt={session.user.name} />
+            <Image src={session.user.image} alt={session.user.name} />
           </div>
         )}
       </main>
