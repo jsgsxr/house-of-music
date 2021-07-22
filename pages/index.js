@@ -12,7 +12,7 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-export default function Home({ props }) {
+export default function Home({ session }) {
 
   return (
     <div className="loginMain">
@@ -23,16 +23,16 @@ export default function Home({ props }) {
 
       </Head>
       <main>
-        {props.session ? (
+        {session ? (
           <button onClick={() => signOut()}>Sign out</button>
         ) : (
           <button onClick={() => signIn()}>Sign in</button>
         )}
-        {props.session && (
+        {session && (
           <div>
-            <p>Signed in as {props.session.user.email}</p>
-            <p>Name {props.session.user.name}</p>
-            <Image src={props.session.user.image} />
+            <p>Signed in as {session.user.email}</p>
+            <p>Name {session.user.name}</p>
+            <Image src={session.user.image} />
           </div>
         )}
       </main>
