@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { signIn, signOut, getSession } from "next-auth/client";
+import Image from 'next/image'
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);
@@ -37,7 +38,7 @@ export default function Home() {
           <div>
             <p>Signed in as {session.user.email}</p>
             <p>Name {session.user.name}</p>
-            <Image src={session.user.image} alt={session.user.name} />
+            <Image src={session.user.image} />
           </div>
         )}
       </main>
