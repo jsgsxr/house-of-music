@@ -1,0 +1,73 @@
+.loginMain {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../public/images/background.jpeg");
+  background-size: cover;
+}
+
+.loginTitleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  background-color: rgba(5, 5, 5, 0.801);
+}
+
+.loginTitle {
+  font-size: 4rem;
+  margin-top: .8rem;
+  margin-bottom: -1rem;
+  color: white;
+}
+
+.loginSubTitle {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.loginDescriptionDiv {
+  width: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .2rem solid grey;
+  background-color: rgba(5, 4, 49, 0.829);
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  z-index: 2;
+}
+
+.loginDescription {
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.loginDescription2 {
+  margin-top: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.loginLink {
+  background-color: rgb(4, 4, 255);
+  color: white;
+  font-size: 1.8rem;
+  transition-duration: .4s;
+  border: .3rem solid black;
+  border-radius: 30%;
+  padding: 1rem 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+.loginLink:hover {
+  cursor: pointer;
+  background-color: rgb(52, 52, 218)
+}

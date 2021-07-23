@@ -1,8 +1,13 @@
 import { providers, signIn, getSession, csrfToken } from "next-auth/client";
+import styles from '../styles/signin.module.css'
 
 function signin({ providers }) {
   return (
-    <div>
+    <div className={styles.signInOpacity}> 
+    <div className={styles.signInBody}>
+      <div className={styles.signInDiv}>
+        <h1 className={styles.signInTitle}>Sign In With:</h1>
+      </div>
       {Object.values(providers).map((provider) => {
         return (
           <div key={provider.name}>
@@ -12,6 +17,7 @@ function signin({ providers }) {
           </div>
         );
       })}
+    </div>  
     </div>
   );
 }
@@ -24,7 +30,7 @@ export async function getServerSideProps(context) {
 
   if (session) {
     return {
-      redirect: { destination: "/" },
+      redirect: { destination: "/userHome" },
     };
   }
 
