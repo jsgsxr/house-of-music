@@ -10,22 +10,22 @@ const navButtons = [
     {
       label: "Explore",
       path: "/explore",
-      icon: <FontAwesomeIcon icon={faGlobe} size="lg" />
+      icon: <FontAwesomeIcon icon={faGlobe} size="lg" />,
     },
     {
       label: "Messages",
       path: "/userMessages",
-      icon: <FontAwesomeIcon icon={faComments} size="lg" />
+      icon: <FontAwesomeIcon icon={faComments} size="lg" />,
     },
     {
       label: "Notifications",
       path: "/notifications",
-      icon: <FontAwesomeIcon icon={faBell} size="lg" />
+      icon: <FontAwesomeIcon icon={faBell} size="lg" />,
     },
     {
       label: "Account",
       path: "/userAccount",
-      icon: <FontAwesomeIcon icon={faUserAlt} size="lg" />
+      icon: <FontAwesomeIcon icon={faUserAlt} size="lg" />,
     }
 ];
 

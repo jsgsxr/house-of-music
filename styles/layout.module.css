@@ -1,3 +1,7 @@
+.root {
+  background-color: black;
+}
+
 .body main {
   display: flex;
   flex-direction: column;
@@ -36,7 +40,7 @@
 }
 
 .headImage {
-  border-radius: 6rem;
+  border-radius: 50%;
 }
 
 .headerTitle {
@@ -53,6 +57,30 @@
   justify-content: space-between;
 }
 
+.dropDownDiv {
+  right: 40%;
+  top: 45px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: rgb(73, 72, 72);
+  border: 2.5px solid black;
+}
+
+.menuItem {
+  padding: 0 1.8rem;
+  font-size: .7rem;
+  transition-duration: .4s;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 25px;
+}
+
 .navDiv {
   width: 20%;
   min-width: 200px;
@@ -65,12 +93,19 @@
 }
 
 .navButton {
-  min-width: 30%;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: white;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.226);
+  border-radius: 50%;
 }
 
 .navIcon {
@@ -82,7 +117,7 @@
   color: rgb(255, 254, 254);
   font-size: .7rem;
   padding: .1rem .5rem;
-  position: fixed;
+  position: sticky;
 }
 
 .navLabel {

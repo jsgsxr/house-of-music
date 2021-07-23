@@ -1,4 +1,4 @@
-import NavButton from "./NavButton";
+import NavButton from "./NavButton"
 import styles from '../../styles/layout.module.css'
 
 const NavLinks = props => (

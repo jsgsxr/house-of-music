@@ -6,6 +6,7 @@
 
 .profileDiv {
   width: 20%;
+  max-width: 160px;
   min-width: 155px;
   padding: .1rem .5rem;
   border-radius: 25px;

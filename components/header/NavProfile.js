@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/client'
+import { useSession, signOut } from 'next-auth/client'
 import styles from '../../styles/userHome.module.css'
 
 export default function NavProfile() {

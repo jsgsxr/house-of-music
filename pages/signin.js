@@ -14,8 +14,6 @@ function signin({ providers}) {
             return (
               <div key={provider.name}>
                 <button onClick={() => signIn(provider.id)}>
-                  {(provider.name === 'Google') ? 
-                  <FontAwesomeIcon className={styles.icon} icon={faGoogle} size="lg" /> : <FontAwesomeIcon className={styles.icon} icon={faFacebook} size="lg" />}
                   Sign in with {provider.name}
                 </button>
               </div>
