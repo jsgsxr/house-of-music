@@ -1,31 +1,31 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCompass,
-  faMapMarkerAlt,
-  faUser,
-  faShoppingCart
+  faGlobe,
+  faComments,
+  faBell,
+  faUserAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 const navButtons = [
     {
       label: "Explore",
-      path: "/",
-      icon: <FontAwesomeIcon icon={faCompass} />
+      path: "/explore",
+      icon: <FontAwesomeIcon icon={faGlobe} size="lg" />
     },
     {
-      label: "Near Me",
-      path: "/nearme",
-      icon: <FontAwesomeIcon icon={faMapMarkerAlt} />
+      label: "Messages",
+      path: "/userMessages",
+      icon: <FontAwesomeIcon icon={faComments} size="lg" />
     },
     {
-      label: "My Cart",
-      path: "/mycart",
-      icon: <FontAwesomeIcon icon={faShoppingCart} />
+      label: "Notifications",
+      path: "/notifications",
+      icon: <FontAwesomeIcon icon={faBell} size="lg" />
     },
     {
-      label: "Profile",
-      path: "/profile",
-      icon: <FontAwesomeIcon icon={faUser} />
+      label: "Account",
+      path: "/userAccount",
+      icon: <FontAwesomeIcon icon={faUserAlt} size="lg" />
     }
 ];
 

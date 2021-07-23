@@ -1,7 +1,8 @@
-.body {
+.body main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: black;
 }
 
 .header {
@@ -30,6 +31,10 @@
   justify-content: space-between;
 }
 
+.headerIcon:hover {
+  cursor: pointer;
+}
+
 .headImage {
   border-radius: 6rem;
 }
@@ -40,9 +45,18 @@
   color: rgba(245, 245, 245, 0.918);
 }
 
+.profileNav {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navDiv {
   width: 20%;
   min-width: 200px;
+  height: 50px;
   margin-right: 6rem;
   display: flex;
   flex-direction: row;
@@ -60,7 +74,15 @@
 }
 
 .navIcon {
-  width: 1rem;
+  width: 1.5rem;
+}
+
+.toolTip {
+  background: rgb(39, 39, 39);
+  color: rgb(255, 254, 254);
+  font-size: .7rem;
+  padding: .1rem .5rem;
+  position: fixed;
 }
 
 .navLabel {

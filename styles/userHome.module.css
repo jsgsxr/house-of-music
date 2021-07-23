@@ -1,0 +1,28 @@
+.userHomeBody {
+    width: 100%;
+    height: 100vh;
+  background-color: black;
+}
+
+.profileDiv {
+  width: 20%;
+  min-width: 155px;
+  padding: .1rem .5rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition-duration: .4s;
+}
+
+.profileDiv:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.226);
+}
+
+.profileImg {
+  border-radius: 50%;
+  border: .1rem solid black;
+}

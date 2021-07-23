@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import Layout from '../../components/layouts'
 import styles from '../../styles/signup.module.css'
 
 export default function SignUp() {
   return (
+    <Layout>
     <div className={styles.loginMain}>
       <div className={styles.loginTitleDiv}>
         <h1 className={styles.loginTitle}>Find Musicians Near You!</h1>
@@ -19,5 +21,6 @@ export default function SignUp() {
         </Link>
       </div>
     </div>
+    </Layout>
   )
 }

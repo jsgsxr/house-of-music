@@ -1,22 +1,28 @@
 import { providers, signIn, getSession, csrfToken } from "next-auth/client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons"
 import styles from '../styles/signin.module.css'
 
-function signin({ providers }) {
+function signin({ providers}) {
   return (
     <div className={styles.signInOpacity}> 
     <div className={styles.signInBody}>
       <div className={styles.signInDiv}>
         <h1 className={styles.signInTitle}>Sign In With:</h1>
+        <div className={styles.buttonDiv}>
+          {Object.values(providers).map((provider) => {
+            return (
+              <div key={provider.name}>
+                <button onClick={() => signIn(provider.id)}>
+                  {(provider.name === 'Google') ? 
+                  <FontAwesomeIcon className={styles.icon} icon={faGoogle} size="lg" /> : <FontAwesomeIcon className={styles.icon} icon={faFacebook} size="lg" />}
+                  Sign in with {provider.name}
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      {Object.values(providers).map((provider) => {
-        return (
-          <div key={provider.name}>
-            <button onClick={() => signIn(provider.id)}>
-              Sign in with {provider.name}
-            </button>
-          </div>
-        );
-      })}
     </div>  
     </div>
   );

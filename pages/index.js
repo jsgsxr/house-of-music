@@ -1,27 +1,29 @@
-import { Redirect, getSession } from "next-auth/client"
+import { useSession } from "next-auth/client"
 import Layout from '../components/layouts'
-import SignUp from '../components/signup/SignUp'
+import SignUp from './signup/SignUp'
+import UserHome from './userHome'
 
 
-export const getServerSideProps = async (context) => {
-  const session = await getSession(context);
+// export const getServerSideProps = async (context) => {
+//   const session = await getSession(context);
 
-  return {
-    props: {
-      session,
-    },
-  };
-};
+//   return {
+//     props: {
+//       session,
+//     },
+//   };
+// };
 
-export default function Home({ session }) {
+export default function Home() {
+  const [session, loading] = useSession();
 
   return (
-    <Layout className="loginMain">
-        {session ? (
-          <Redirect to="/userHome" />
-        ) : (
-          <SignUp />
-        )}
-    </Layout>
+    <>
+      {session ? (
+        <UserHome />
+      ) : (
+        <SignUp />
+      )}
+   </>
   )
 }
