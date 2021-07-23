@@ -16,7 +16,7 @@ export default function SignUp() {
         Looking for your next Jazz session? Or the ever-elusive, rare and treasured Drummer? Or maybe just a bass player looking to slap it up with some new friends.</p> 
         <p className={styles.loginDescription2}>Find your family, and come join us:</p>
       
-        <Link href="/signin">
+        <Link href="/signin" passHref={true}>
           <button className={styles.loginLink}>Sign in</button>
         </Link>
       </div>
