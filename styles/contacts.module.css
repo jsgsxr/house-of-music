@@ -1,0 +1,115 @@
+.contactsDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.requestsDiv {
+  width: 90%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  color: white;
+  font-size: .9rem;
+  background-color: rgb(42, 42, 43);
+  border-radius: 15px;
+}
+
+.requestsTopDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.requestTitleDiv {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.moreIcon:hover {
+  cursor: pointer;
+  background-color: rgb(66, 66, 66);
+  border-radius: 15px;
+  padding: .1rem;
+  transition-duration: .4s;
+}
+
+.friendRequestDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.profilePic {
+  border-radius: 50%; 
+}
+
+.profileDiv {
+  padding-top: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: .4s;
+}
+
+.profileDiv:hover {
+  cursor: pointer;
+  background-color: rgb(66, 66, 66);
+  border-radius: 15px;
+}
+
+.friendNameDiv {
+  margin-top: -6px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.confirmDiv {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confirmButton {
+  width: 80%;
+  height: 2.2rem;
+  font-size: .95rem;
+  color: white;
+  background-color: rgb(34, 67, 175);
+  border: .2rem solid rgb(46, 79, 189);
+  border-radius: 7px;
+  transition-duration: 0.4s;
+}
+
+.confirmButton:hover {
+  cursor: pointer;
+  background-color: rgb(69, 101, 206);
+}
+
+.deleteButton {
+  width: 80%;
+  height: 2.2rem;
+  margin-top: -15px;
+  font-size: .95rem;
+  color: white;
+  background-color: rgb(66, 66, 66);
+  border: .2rem solid rgb(67, 68, 70);
+  border-radius: 7px;
+  transition-duration: 0.4s;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  background-color: rgb(107, 107, 107);
+}
