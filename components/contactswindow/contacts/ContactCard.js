@@ -6,7 +6,7 @@ const ContactCards = props => (
     <Link href={props.path} passHref={true}>
       <div className={styles.contactCard}>
         <div className={styles.profilePic}>
-          <Image className={styles.profileImg} src={props.profileImg} width="30px" height="30px" />
+          <Image className={styles.profileImg} src={props.profileImg} width="30px" height="30px" alt="profile" />
         </div>
         <p className={styles.contactLabel}>{props.label}</p>
       </div>

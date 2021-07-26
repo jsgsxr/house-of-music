@@ -15,7 +15,7 @@ export default function YourPages() {
         </div>
       </div>
       <div className={styles.contactCard}>
-        <Image className={styles.profileImg} src="/images/steelCircut.jpeg" width="30px" height="30px" />
+        <Image className={styles.profileImg} src="/images/steelCircut.jpeg" width="30px" height="30px" alt="profile" />
         <p className={styles.contactLabel}>Steel Circuit</p>
       </div>
       <div className={styles.pagesActionDiv}>

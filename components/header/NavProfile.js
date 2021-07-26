@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/client'
 import styles from '../../styles/userHome.module.css'
-import Image from 'next/image';
+import Image from 'next/image'
 
 export default function NavProfile() {
   const [session, loading] = useSession();
