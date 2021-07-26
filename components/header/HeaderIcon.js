@@ -6,7 +6,7 @@ export default function HeaderIcon() {
   return (
     <Link href="/" passHref={true}>
       <div className={styles.headerIcon}>
-        <Image className={styles.headImage} src="/../public/images/logo-1.jpeg" width="50px" height="50px" alt="logo" />
+        <Image className={styles.headImage} src="/images/logo-1.jpeg" width="50px" height="50px" alt="logo" />
         <h1 className={styles.headerTitle}>House of Music</h1>
       </div>
     </Link>
