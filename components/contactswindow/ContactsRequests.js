@@ -16,19 +16,19 @@ export default function ContactRequests() {
       <div className={styles.friendRequestDiv}>
         <div className={styles.profileDiv}>
           <div className={styles.profilePicDiv}>
-          <Image src='/../public/images/testprofilepic.jpeg' className={styles.profilePic} alt="profile" width="50px" height="50px" />
-        </div>  
-        <div className={styles.friendNameDiv}>
-          <p className={styles.friendName}>
+            <Image src='/../public/images/testprofilepic.jpeg' className={styles.profilePic} alt="profile" width="50px" height="50px" />
+          </div>  
+          <div className={styles.friendNameDiv}>
+            <p className={styles.friendName}>
             周悟颺
             <br />
             1 day ago
-          </p>  
+            </p>  
+          </div>
         </div>
-      </div>
         <div className={styles.confirmDiv}>
-            <button className={styles.confirmButton}>Confirm</button>
-            <button className={styles.deleteButton}>Delete</button>
+          <button className={styles.confirmButton}>Confirm</button>
+          <button className={styles.deleteButton}>Delete</button>
         </div>
       </div>
     </div>

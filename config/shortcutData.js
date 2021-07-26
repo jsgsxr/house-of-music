@@ -3,7 +3,7 @@ import {
 faUserFriends, faUsers, faShoppingCart, faVideo, faCompactDisc
 } from "@fortawesome/free-solid-svg-icons"
 
-const shortcuts = [
+const shortcutData = [
   {
     label: "Friends",
     path: "/friends",
@@ -31,4 +31,4 @@ const shortcuts = [
   }
 ]
 
-export default shortcuts;
+export default shortcutData;

@@ -3,7 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
+  padding-bottom: 100px;
 }
+
+.contactsDiv::-webkit-scrollbar {
+  display: none;
+}
+
 .requestsDiv {
   width: 90%;
   margin-top: 1.5rem;
@@ -113,3 +120,119 @@
   cursor: pointer;
   background-color: rgb(107, 107, 107);
 }
+
+.yourPagesDiv {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.yourPagesTitleDiv {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+.pagesActionDiv {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -.7rem;
+}
+
+.pagesAction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: .85rem;
+  margin-bottom: -.5rem;
+  margin-left: 15px;
+  padding-left: 25px;
+  border-radius: 10px;
+  transition-duration: .4s;
+}
+
+.pagesAction:hover {
+  cursor: pointer;
+  background-color: rgba(129, 129, 129, 0.404);
+}
+
+.actionLabel {
+  margin-left: .8rem;
+}
+
+.contactsDivider {
+  width: 85%;
+  margin-top: 1.5rem;
+  border-bottom: .15rem solid rgb(71, 71, 71);
+}
+
+.messengerMainDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.messengerHeaderDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -.5rem;
+}
+
+.contactsTitle {
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+
+.headerIcons {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.iconsDiv {
+  padding: 6px;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+}
+
+.iconsDiv:hover {
+  cursor: pointer;
+  background-color: rgb(77, 77, 77);
+}
+
+.profileImg {
+  border-radius: 50%;
+}
+
+.contactCard {
+  margin: 0 5px;
+  padding-left: 10px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition-duration: .4s;
+}
+  
+.contactCard:hover {
+  cursor: pointer;
+  background-color: rgba(129, 129, 129, 0.404);
+}
+
+.contactLabel {
+  margin-left: .7rem;
+  font-size: .95rem;
+}
+

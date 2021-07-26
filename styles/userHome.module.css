@@ -4,11 +4,11 @@
   background-color: black;
   display: flex;
   flex-direction: row;
-
 }
 
 .shortcutWindow {
   width: 25%;
+  min-width: 315px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -21,10 +21,13 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  padding-bottom: 100px;
 }
 
 .contactsWindow {
   width: 20%;
+  min-width: 240px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +42,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   color: white;
   transition-duration: .4s;
 }
@@ -52,4 +54,9 @@
 .profileImg {
   border-radius: 50%;
   border: .15rem solid black;
+  margin-right: .6rem;
+}
+
+.mainContentWindow::-webkit-scrollbar {
+  display: none;
 }
