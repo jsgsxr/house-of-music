@@ -1,5 +1,4 @@
 import { providers, signIn, getSession, csrfToken } from "next-auth/client"
-import Link from "next/link"
 import styles from '../styles/signin.module.css'
 
 function signin({ providers}) {
@@ -12,11 +11,9 @@ function signin({ providers}) {
           {Object.values(providers).map((provider) => {
             return (
               <div key={provider.name}>
-                <Link href="/userHome" passHref={true}>
-                  <button onClick={() => signIn(provider.id)}>
-                    Sign in with {provider.name}
-                  </button>
-                </Link>
+                <button onClick={() => signIn(provider.id)}>
+                  Sign in with {provider.name}
+                </button>
               </div>
             );
           })}
