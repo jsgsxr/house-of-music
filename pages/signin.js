@@ -33,9 +33,9 @@ export async function getServerSideProps(context) {
   const session = await getSession({ req });
 
   if (session) {
-    return {
-      redirect: { destination: "/userHome" },
-    };
+    return (
+      <UserHome />
+    );
   }
 
   return {
