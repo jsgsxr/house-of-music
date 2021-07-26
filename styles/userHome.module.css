@@ -16,13 +16,10 @@
 }
 
 .mainContentWindow {
-  background-color: red;
   width: 55%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  padding-bottom: 100px;
 }
 
 .contactsWindow {
@@ -43,18 +40,22 @@
   flex-direction: row;
   align-items: center;
   color: white;
+  background-color: rgba(0, 0, 0, 0.13);
   transition-duration: .4s;
 }
 
 .profileDiv:hover {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.226);
+  background-color: rgba(27, 27, 27, 0.486);
 }
 
 .profileImg {
   border-radius: 50%;
   border: .15rem solid black;
-  margin-right: .6rem;
+}
+
+.userName {
+  margin-left: .6rem;
 }
 
 .mainContentWindow::-webkit-scrollbar {

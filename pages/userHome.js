@@ -5,6 +5,7 @@ import SignUp from '../pages/signup/SignUp'
 import Loading from './signup/Loading'
 import ShortcutWindow from '../components/shortcutwindow/ShortcutWindow'
 import ContactsWindow from '../components/contactswindow/ContactsWindow'
+import MainContentWindow from '../components/mainContentWindow/MainContentWindow'
 
 export default function UserHome() {
   const [session, loading] = useSession();
@@ -17,7 +18,7 @@ export default function UserHome() {
           <ShortcutWindow />
         </div>
         <div className={styles.mainContentWindow}>
-
+          <MainContentWindow />
         </div>
         <div className={styles.contactsWindow}>
           <ContactsWindow />

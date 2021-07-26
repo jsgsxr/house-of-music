@@ -1,0 +1,69 @@
+.mainContentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+}
+
+.storiesMainDiv {
+  color: white;
+  background-color: red;
+  width: 95%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.storyDiv {
+  background-color: green;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.storyCard {
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 23%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.storyContentDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.storyProfileImgDiv {
+  z-index: 2;
+  position: absolute;
+  top: 7%;
+  left: 10%;
+  border: 4px solid rgb(0, 119, 255);
+  border-radius: 50%;
+}
+
+.storyProfileImg {
+  border-radius: 50%;
+}
+
+.storyLabel {
+  width: 95%;
+  font-size: .9rem;
+  font-weight: bold;
+  padding-left: 10%;
+  z-index: 2;
+}
+
