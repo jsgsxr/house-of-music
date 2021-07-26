@@ -1,27 +1,23 @@
+import Image from "next/image"
+
 const postData = [
     {
-      label: "Sephiroth",
+      postAuthor: "Sephiroth",
       path: "/sephProfile",
       profileImg: '/images/sephiroth.jpeg',
-      storyContent: '/images/cloudsephfight.jpeg',
-    },
-    {
-      label: "Tifa Lockheart",
-      path: "/tifaProfile",
-      profileImg: '/images/tifa.jpeg',
-      storyContent: '/images/cloudtifapose.jpeg',
-    },
-    {
-      label: "Vincent Valentine",
-      path: "/vincentProfile",
-      profileImg: '/images/vincent.jpeg',
-      storyContent: '/images/auronvincentpose.jpeg',
-    },
-    {
-      label: "Aeris Gainsborough",
-      path: "/aerisProfile",
-      profileImg: '/images/aeris.jpeg',
-      storyContent: '/images/aerisdress.jpg',
+      postText: 'Just had a Killer Night with the Fam',
+      postContent: <Image src='/images/sephpostimage.jpeg' position="relative" layout='fill' objectFit='cover' alt="story" />,
+      reactions: {
+        likes: 5,
+        loves: 4,
+        fires: 3,
+        total: 12, 
+      },
+      reactionsTotal: 12,
+      isliked: true,
+      commentCount: 4,
+      shareCount: 5,
+      sharable: true,
     },
   ]
   
