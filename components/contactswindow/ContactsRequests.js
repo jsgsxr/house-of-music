@@ -16,7 +16,7 @@ export default function ContactRequests() {
       <div className={styles.friendRequestDiv}>
         <div className={styles.profileDiv}>
           <div className={styles.profilePicDiv}>
-            <Image src='/../public/images/testprofilepic.jpeg' className={styles.profilePic} alt="profile" width="50px" height="50px" />
+            <Image src='/images/testprofilepic.jpeg' className={styles.profilePic} alt="profile" width="50px" height="50px" />
           </div>  
           <div className={styles.friendNameDiv}>
             <p className={styles.friendName}>
