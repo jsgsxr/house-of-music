@@ -13,6 +13,7 @@ function Signin({ providers}) {
               <div key={provider.name}>
                 <button onClick={() => signIn(provider.id, {
                   callbackUrl: '/userHome',
+                  json: true,
                 })}>
                   Sign in with {provider.name}
                 </button>
