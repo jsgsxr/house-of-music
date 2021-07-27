@@ -12,7 +12,7 @@ function signin({ providers}) {
             return (
               <div key={provider.name}>
                 <button onClick={() => signIn(provider.id, {
-                  callbackUrl: `${window.location.origin}`,
+                  callbackUrl: '/userHome',
                 })}>
                   Sign in with {provider.name}
                 </button>
@@ -31,12 +31,6 @@ export default signin;
 export async function getServerSideProps(context) {
   const { req } = context;
   const session = await getSession({ req });
-
-  if (session) {
-    return {
-      redirect: { destination: "/userHome" },
-    };
-  }
 
   return {
     props: {
