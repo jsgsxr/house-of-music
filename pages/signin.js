@@ -1,7 +1,7 @@
 import { providers, signIn, getSession, csrfToken } from "next-auth/client"
 import styles from '../styles/signin.module.css'
 
-function signin({ providers}) {
+function Signin({ providers}) {
   return (
     <div className={styles.signInOpacity}> 
     <div className={styles.signInBody}>
@@ -26,11 +26,17 @@ function signin({ providers}) {
   );
 }
 
-export default signin;
+export default Signin;
 
 export async function getServerSideProps(context) {
   const { req } = context;
   const session = await getSession({ req });
+
+  if (session) {
+    return {
+      redirect: { destination: "/userHome" },
+    };
+  }
 
   return {
     props: {

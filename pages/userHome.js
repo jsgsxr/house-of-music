@@ -1,11 +1,11 @@
 import Layout from '../components/layouts'
 import styles from '../styles/userHome.module.css'
 import { useSession } from 'next-auth/client'
-import SignUp from '../pages/signup/SignUp'
 import Loading from './signup/Loading'
 import ShortcutWindow from '../components/shortcutwindow/ShortcutWindow'
 import ContactsWindow from '../components/contactswindow/ContactsWindow'
 import MainContentWindow from '../components/mainContentWindow/MainContentWindow'
+import Home from './index'
 
 export default function UserHome() {
   const [session, loading] = useSession();
@@ -29,6 +29,6 @@ export default function UserHome() {
     } if (loading) {
       return <Loading />
     } else {
-      return <SignUp />
+      return <Home />
     }
 }
