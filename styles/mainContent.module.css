@@ -133,8 +133,8 @@
 
 .storyNextDiv {
   background-color: rgb(63, 63, 63);
-  position: absolute;
-  right: 20%;
+  position: sticky;
+  right: 7%;
   padding: 15px;
   border-radius: 50%;
   z-index: 3;
