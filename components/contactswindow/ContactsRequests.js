@@ -8,7 +8,7 @@ export default function ContactRequests() {
     <div className={styles.requestsDiv}>
       <div className={styles.requestsTopDiv}>  
         <div className={styles.requestTitleDiv}>
-          <FontAwesomeIcon icon={faUserFriends} size="md" />
+          <FontAwesomeIcon icon={faUserFriends} />
           <p className={styles.requestTitle}>Friend Requests</p>
         </div>
         <FontAwesomeIcon icon={faEllipsisH} className={styles.moreIcon} />

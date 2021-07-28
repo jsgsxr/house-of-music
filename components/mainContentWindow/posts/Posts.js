@@ -3,7 +3,7 @@ import styles from '../../../styles/posts.module.css'
 
 const Posts = props => (
   <div className={styles.postMainDiv}>
-    {props.posts.map(button => (
+    {props.posts && props.posts.map(button => (
       <PostsCard
         key={button.path}
         path={button.path}
@@ -16,6 +16,7 @@ const Posts = props => (
         commentCount={button.commentCount}
         shareCount={button.shareCount}
         sharable={button.sharable}
+        session={props.session}
       />
     ))}
   </div>

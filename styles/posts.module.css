@@ -11,6 +11,7 @@
   color: white;
   background-color: rgb(42, 42, 43);
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .postHeaderDiv {
@@ -113,6 +114,10 @@
   flex-direction: row;
   align-items: center;
 }
+.reactionCount:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 .reactionIconsDiv {
   margin-right: 7px;
@@ -133,21 +138,104 @@
 .shareCountText {
   margin-left: 10px;
 }
+.shareCountText:hover, .commentCountText:hover {
+  cursor: pointer;
+  text-decoration: underline;
+} 
 
 .likeCommentShareDiv {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+}
+
+.reactActionsMain {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 3%;
 }
 
 .reactActionDiv, .likeActionDiv {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 33%;
+  height: 2rem;
+  margin: .5rem 0;
+  transition-duration: .4s;
+}
+
+.likeActionDivLiked {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(56, 103, 231);
+}
+
+.reactActionDiv:hover {
+  cursor: pointer;
+  background-color: rgba(129, 129, 129, 0.404);
 }
 
 .reactActionText {
   margin-left: 10px;
+}
+
+.openCommentsSelector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  transition-duration: .4s;
+}
+
+.openCommentsSelector:hover {
+  cursor: pointer;
+  background-color: rgba(129, 129, 129, 0.404);
+}
+
+.userProfileImg {
+  border-radius: 50%;
+}
+
+.arrowDownIcon {
+  padding-left: 4px;
+}
+
+.commentBorderDiv {
+  width: 92%;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.commentsMainDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+}
+
+.commentsHeader {
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 3%;
+}
+
+.commentInput {
+  width: 95%;
+  border-radius: 20px;
+  background-color: rgb(75, 74, 74);
+  margin-left: 10px;
+  padding-left: 10px;
+  color: white;
+  outline: none;
 }

@@ -5,10 +5,10 @@ import CreateStory from "./CreateStory";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function StorySection() {
+export default function StorySection(props) {
   return (
     <div className={styles.storiesMainDiv}>
-      <CreateStory />
+      <CreateStory session={props.session} />
       <Stories stories={storyData} />
       <div className={styles.storyNextDiv}>
         <FontAwesomeIcon className={styles.nextIcon} icon={faArrowRight} size="lg" />

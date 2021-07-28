@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Layout from '../../components/layouts'
 import styles from '../../styles/signup.module.css'
 import { useSession } from 'next-auth/client'
-import UserHome from '../userHome';
+import UserHome from '../userHome'
 
 export default function SignUp() {
   const [session, loading] = useSession();

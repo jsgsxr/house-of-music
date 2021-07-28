@@ -11,13 +11,13 @@ export default function ContactMessenger() {
           <p className={styles.contactsTitle}>Contacts</p>
           <div className={styles.headerIcons}>
             <div className={styles.iconsDiv}>
-              <FontAwesomeIcon icon={faPhoneVolume} size="md" />
+              <FontAwesomeIcon icon={faPhoneVolume} />
             </div>
             <div className={styles.iconsDiv}>
-              <FontAwesomeIcon icon={faSearch} size="md" />
+              <FontAwesomeIcon icon={faSearch} />
             </div>
             <div className={styles.iconsDiv}>
-              <FontAwesomeIcon icon={faEllipsisH} size="md" />
+              <FontAwesomeIcon icon={faEllipsisH} />
             </div>
           </div>
       </div>

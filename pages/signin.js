@@ -1,5 +1,12 @@
 import { providers, signIn, getSession, csrfToken } from "next-auth/client"
 import styles from '../styles/signin.module.css'
+// import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+// import firebase from "../firebase/initFirebase";
+
+// const uiConfig = {
+//   signInSuccessUrl: "/userHome",
+//   signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
+// }
 
 function Signin({ providers}) {
   return (
@@ -12,11 +19,11 @@ function Signin({ providers}) {
             return (
               <div key={provider.name}>
                 <button onClick={() => signIn(provider.id, {
-                  callbackUrl: '/userHome',
                   json: true,
                 })}>
                   Sign in with {provider.name}
                 </button>
+                {/* <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /> */}
               </div>
             );
           })}

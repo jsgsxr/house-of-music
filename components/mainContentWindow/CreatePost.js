@@ -1,20 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useSession } from "next-auth/client"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo, faPhotoVideo, faGuitar } from "@fortawesome/free-solid-svg-icons"
 import styles from '../../styles/createPost.module.css'
 
-export default function CreatePost() {
-  const [session, loading] = useSession();
-
+export default function CreatePost(props) {
   return (
     <div className={styles.createPostMainDiv}>
       <div className={styles.createPostContentDiv}>
-        <Image className={styles.createPostImg} src={session.user.image} width="45px" height="45px" alt="profile" />
+        <Image className={styles.createPostImg} src={props.session.user.image} width="45px" height="45px" alt="profile" />
         <Link href="/createPost" passHref={true}>
           <div className={styles.createPostContentInput}>
-            <p className={styles.createPostContent}>Whats on your mind, {session.user.name.split(" ")[0]}?</p>
+            <p className={styles.createPostContent}>Whats on your mind, {props.session.user.name.split(" ")[0]}?</p>
           </div>
         </Link>
       </div>

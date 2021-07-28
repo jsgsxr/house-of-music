@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className={styles.root}>
       <Head>
-        <title>House of Music - Login or Sign Up!</title>
+        <title>House of Music - Find Local Musicians!</title>
         <meta name="description" content="Meet Local Musicians" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
