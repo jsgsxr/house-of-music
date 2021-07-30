@@ -8,13 +8,13 @@ import styles from '../../styles/layout.module.css'
 
 export default function Header() {
   const [dropdown, setDropdown] = useState(false)
-  const [session, loading] = useSession();
+  const [session, loading] = useSession()
   const handleLogout = () => {
     signOut();
   }
   const handleDropdown = () => {
     {dropdown ? (setDropdown(false)) : (setDropdown(true))}
-    console.log(dropdown);
+    console.log(dropdown)
   }
 
   return (

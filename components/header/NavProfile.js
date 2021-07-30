@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function NavProfile() {
   const [session, loading] = useSession();
-  console.log(session.user.name);
+ 
 
   return (
     <div className={styles.profileDiv}>

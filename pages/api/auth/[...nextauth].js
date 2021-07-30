@@ -1,5 +1,9 @@
-import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import NextAuth from "next-auth"
+import Providers from "next-auth/providers"
+import { FirebaseAdapter } from "@next-auth/firebase-adapter"
+import firebase from "../../../firebase/initFirebase"
+
+const firestore = firebase.firestore()
 
 export default NextAuth({
   providers: [
@@ -12,7 +16,5 @@ export default NextAuth({
         clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     })
   ],
-  pages: {
-    signIn: "signin",
-  }
+  adapter: FirebaseAdapter(firestore),
 });

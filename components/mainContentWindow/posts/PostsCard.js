@@ -7,7 +7,6 @@ import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShare
 
 function PostCards(props) {
   const [openComment, setOpenComment] = useState(false);
-  const [isLiked, setIsLiked] = useState(props.isLiked);
   const reactionsTotal = props.reactionsTotal;
 
   const handleOpenComment = () => {
@@ -16,8 +15,8 @@ function PostCards(props) {
   }
 
   const handleLike = () => {
-    {isLiked ? (setIsLiked(false)) : (setIsLiked(true));
-    console.log("Liked?" + isLiked);}
+    // {isLiked ? (setIsLiked(false)) : (setIsLiked(true));
+    // console.log("Liked?" + isLiked);}
   }
 
   return (
@@ -64,7 +63,7 @@ function PostCards(props) {
         <div className={styles.likeCommentShareDiv}>
           <div className={styles.reactActionsMain}>
             <div className={styles.reactActionDiv}>
-              <div className={!isLiked ? (styles.likeActionDivLiked) : (styles.likeActionDiv)} onClick={handleLike}>  
+              <div className={props.isliked ? (styles.likeActionDivLiked) : (styles.likeActionDiv)} onClick={handleLike}>  
                 <FontAwesomeIcon icon={faThumbsUp} />
                 <p className={styles.reactActionText}>Like</p>
               </div>

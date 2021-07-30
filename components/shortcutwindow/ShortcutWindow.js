@@ -10,7 +10,6 @@ export default function ShortcutWindow() {
       <ProfileShortcut />
       <Shortcuts className={styles.topShortcuts} shortcuts={shortcutData} />
       <div className={styles.shortcutsDivider} />
-      <CreatePost />
     </div>
   )
 }

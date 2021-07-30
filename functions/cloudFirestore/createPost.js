@@ -1,4 +1,5 @@
-import firebase from '../../firebase/initFirebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 
 const CreatePost = () => {
   const sendData = () => {
@@ -32,4 +33,4 @@ const CreatePost = () => {
   )
 }
 
-export default CreatePost
+export { CreatePost }

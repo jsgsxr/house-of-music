@@ -1,4 +1,3 @@
-// import postData from '../../config/postData'
 import styles from '../../styles/mainContent.module.css'
 import CreatePost from './CreatePost'
 import Posts from './posts/Posts'
@@ -7,7 +6,7 @@ import { useSession } from 'next-auth/client'
 import React, { useEffect, useState } from 'react'
 import firebase from '../../firebase/initFirebase'
 
-export default function MainContentWindow() {
+export default function MainContentWindow(props) {
   const [session] = useSession()
   const [postData, setPostData] = useState([])
   const [loading, setLoading] = useState(true)
@@ -30,7 +29,7 @@ export default function MainContentWindow() {
   return (
     <div className={styles.mainContentDiv}>
       <StorySection session={session} />
-      <CreatePost session={session} />
+      <CreatePost session={session} handleOpen={props.handleOpen} />
       <Posts posts={!loading && postData} session={session} />
     </div>
   )

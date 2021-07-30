@@ -1,19 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faVideo, faPhotoVideo, faGuitar } from "@fortawesome/free-solid-svg-icons"
 import styles from '../../styles/createPost.module.css'
 
 export default function CreatePost(props) {
+
   return (
     <div className={styles.createPostMainDiv}>
       <div className={styles.createPostContentDiv}>
         <Image className={styles.createPostImg} src={props.session.user.image} width="45px" height="45px" alt="profile" />
-        <Link href="/createPost" passHref={true}>
-          <div className={styles.createPostContentInput}>
-            <p className={styles.createPostContent}>Whats on your mind, {props.session.user.name.split(" ")[0]}?</p>
-          </div>
-        </Link>
+        <div className={styles.createPostContentInput} onClick={props.handleOpen} >
+          <p className={styles.createPostContent}>Whats on your mind, {props.session.user.name.split(" ")[0]}?</p>
+        </div>
       </div>
       <div className={styles.createPostDivider} />
       <div className={styles.createPostAddons}>

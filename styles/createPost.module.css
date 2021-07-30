@@ -90,3 +90,220 @@
   cursor: pointer;
   background-color: rgba(129, 129, 129, 0.404);
 }
+
+.opaqueBackgroundDiv {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 20, 20, 0.767);
+  z-index: 10;
+}
+
+.popupDiv {
+  color: white;
+  background-color: rgb(42, 42, 43);
+  border-radius: 10px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popupHeader {
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.popupTitle {
+  padding-left: 42%;
+}
+
+.closeIconDiv {
+  padding: 5px 9px;
+  margin-right: 15px;
+  background-color: rgb(68, 68, 68);
+  border-radius: 50%;
+  transition-duration: .4s;
+}
+.closeIconDiv:hover {
+  cursor: pointer;
+  background-color: rgb(87, 87, 87);
+}
+
+.popupPostContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createPostForm {
+  width: 93%;
+}
+
+.popupContentProfileDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profileImg {
+  border-radius: 50%;
+}
+
+.popupNameWithSelectDiv {
+  width: 70%;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.postScopeSelect {
+  font-size: .85rem;
+  border-radius: 6px;
+  background-color: rgb(68, 68, 68);
+  padding: 5px 10px;
+  margin-top: -13px;
+}
+.postScopeSelect:hover {
+  cursor: pointer;
+}
+
+.scopeIcon {
+  margin-right: 5px;
+}
+.dropdownIcon {
+  margin-left: 5px;
+}
+
+.scopeSelectDiv {
+  background-color: rgb(68, 68, 68);
+  border: 2px solid rgb(80, 80, 80);
+  border-radius: 6px;
+  position: relative;
+}
+
+.publicDropdown {
+  display: absolute;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgb(80, 80, 80);
+  padding: 5px 10px;
+  z-index: 20;
+}
+.friendsDropdown {
+  padding: 5px 10px;
+  padding-top: 5px;
+}
+
+.publicDropdown:hover, .friendsDropdown:hover {
+  cursor: pointer;
+  background-color: rgb(87, 87, 87);
+}
+
+.popupContentText {
+  display: flex;
+  flex-direction: column;
+}
+
+.postTextInput {
+  background-color: rgb(42, 42, 43);
+  resize: none;
+  outline: none;
+  border: none;
+  overflow-y: auto;
+  height: 30vh;
+  color: white;
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+.postTextInput::-webkit-scrollbar {
+  display: none;
+}
+
+.popupPostAddons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 10px;
+}
+
+.addonText {
+  padding: 5px 16px;
+  font-size: .9rem;
+}
+
+.addonIconsDiv {
+  width: 25%;
+  padding-right: 20px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filePreview {
+  display: flex;
+  align-items: center;
+}
+.imagePreviewIcon {
+  color: rgb(3, 139, 76);
+  margin-right: 10px;
+}
+
+.imageIcon {
+  color: rgb(3, 139, 76);
+}
+.imageIcon:hover {
+  cursor: pointer;
+  color: rgb(100, 212, 71);
+}
+.imageInput {
+  display: none;
+}
+.tagIcon {
+  color: rgb(18, 102, 228);
+  margin-left: 5px;
+}
+.checkinIcon {
+  color: rgb(212, 96, 0);
+}
+
+.postButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.postButton {
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px 0;
+  margin: 15px 0;
+  border-radius: 10px;
+  background-color: rgb(0, 122, 236);
+}
+.postButton:hover {
+  cursor: pointer;
+  background-color: rgb(50, 144, 233);
+}
+.postButton:disabled {
+  cursor: not-allowed;
+  background-color: rgb(83, 83, 83);
+}
