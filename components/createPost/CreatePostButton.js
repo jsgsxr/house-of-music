@@ -1,9 +1,11 @@
 import styles from '../../styles/createPost.module.css'
 import firebase from '../../firebase/initFirebase'
 import { useSession } from 'next-auth/client'
+import { useState } from 'react'
 
 export default function CreatePostButton(props) {
-  const [session, loading] = useSession()
+  const [session] = useSession()
+  const [loading, setLoading] = useState(true)
  
   const time = Date.now()
   const today = new Date(time)
@@ -11,8 +13,8 @@ export default function CreatePostButton(props) {
   const sendData = async() => {
     const db = firebase.firestore()
     if (props.postContent) {  
-      try {
-        await db.collection('postData')
+      await 
+        db.collection('postData')
         .doc()
         .set({
           postAuthor: session.user.name,
@@ -27,13 +29,10 @@ export default function CreatePostButton(props) {
           shareCount: 0,
           sharable: props.shareable,
         }).then(alert('Your Post was Sent!'))
-      } catch (error) {
-        console.log(error)
-        alert(error)
-      }
+        setLoading(false)
     } else {
-        try {
-          await db.collection('postData')
+        await
+          db.collection('postData')
           .add({
             postAuthor: session.user.name,
             path: "/cidProfile",
@@ -46,16 +45,13 @@ export default function CreatePostButton(props) {
             shareCount: 0,
             sharable: props.shareable,
           }).then(alert('Your Post was Sent! (no content)'))
-        } catch (error) {
-          console.log(error)
-          alert(error)
-        }
+          setLoading(false)
       }
   }
 
   return (
     <div className={styles.postButtonDiv}>
-      <button className={styles.postButton} onClick={sendData} disabled={!props.disableButton}>Post</button>
+      <button className={styles.postButton} onClick={!loading && sendData} disabled={!props.disableButton}>Post</button>
     </div>
   )
 }
