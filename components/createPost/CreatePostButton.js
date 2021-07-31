@@ -4,6 +4,10 @@ import { useSession } from 'next-auth/client'
 
 export default function CreatePostButton(props) {
   const [session, loading] = useSession()
+  const time = Date.now()
+  const today = new Date(time)
+  console.log(today.toUTCString())
+
   const sendData = () => {
     try {
       firebase
@@ -16,6 +20,7 @@ export default function CreatePostButton(props) {
         profileImg: session.user.image,
         postText: props.postText,
         postContent: props.postContent.name,
+        postTime: today.toUTCString(),
         reactionsTotal: 1,
         isliked: false,
         commentCount: 0,
