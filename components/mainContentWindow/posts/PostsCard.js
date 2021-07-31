@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShareSquare, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 function PostCards(props) {
-  const [openComment, setOpenComment] = useState(false);
-  const reactionsTotal = props.reactionsTotal;
+  const [openComment, setOpenComment] = useState(false)
+  const [isliked, setIsLiked] = useState(props.isliked)
 
   const handleOpenComment = () => {
     {openComment ? (setOpenComment(false)) : (setOpenComment(true))}
@@ -15,8 +15,8 @@ function PostCards(props) {
   }
 
   const handleLike = () => {
-    // {isLiked ? (setIsLiked(false)) : (setIsLiked(true));
-    // console.log("Liked?" + isLiked);}
+    {isLiked ? (setIsLiked(false)) : (setIsLiked(true));
+    console.log("Liked?" + props.isLiked);}
   }
 
   return (
@@ -39,31 +39,32 @@ function PostCards(props) {
           <FontAwesomeIcon icon={faEllipsisH} size="lg" />
         </div>
       </div>
-      {props.postText ? 
-        (<div className={styles.postTextDiv}>
-          <p className={styles.postText}>{props.postText}</p>  
-        </div>
-      ) : (null)}
-      <div className={styles.postContentDiv}>
-        <Image src={props.postContent} position="relative" layout='fill' objectFit='cover' alt="story" />
+      <div className={styles.postTextDiv}>
+        <p className={styles.postText}>{props.postText}</p>  
       </div>
+      
+      {props.postContent ? (
+        <div className={styles.postContentDiv}>
+          <Image src={props.postContent} position="relative" layout='fill' objectFit='cover' alt="story" />
+        </div>) : (null)}
       <div className={styles.reactionsMainDiv}>
+      {(props.reactionsTotal > 0) ? (
         <div className={styles.reactionCountMainDiv}>
           <div className={styles.reactionCount}>
             <div className={styles.reactionIconsDiv}>
               <FontAwesomeIcon icon={faThumbsUp} />  
             </div>
-            <p className={styles.totalReactions}>{reactionsTotal}</p>
+            <p className={styles.totalReactions}>{props.reactionsTotal}</p>
           </div>
           <div className={styles.commentShareCountDiv}>
-            <p className={styles.commentCountText}>{props.commentCount} Comments</p>
-            <p className={styles.shareCountText}>{props.shareCount} Shares</p>
+            {(props.commentCount > 0) ? (<p className={styles.commentCountText}>{props.commentCount} Comments</p>) : (null)}
+            {(props.shareCount > 0) ? (<p className={styles.shareCountText}>{props.shareCount} Shares</p>) : (null)}
           </div>
-        </div>
+        </div>) : (null)}
         <div className={styles.likeCommentShareDiv}>
           <div className={styles.reactActionsMain}>
             <div className={styles.reactActionDiv}>
-              <div className={props.isliked ? (styles.likeActionDivLiked) : (styles.likeActionDiv)} onClick={handleLike}>  
+              <div className={isliked ? (styles.likeActionDivLiked) : (styles.likeActionDiv)} onClick={handleLike}>  
                 <FontAwesomeIcon icon={faThumbsUp} />
                 <p className={styles.reactActionText}>Like</p>
               </div>
