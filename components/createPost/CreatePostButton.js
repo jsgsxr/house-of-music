@@ -9,14 +9,10 @@ export default function CreatePostButton(props) {
   const today = new Date(time)
   console.log(today.toUTCString())
 
-  const sendData = () => {
+  const sendData = async() => {
+    const db = firebase.firestore().collection('postData').doc()
     if (props.postContent) {  
-      try {
-        firebase
-        .firestore()
-        .collection('postData')
-        .doc()
-        .set({
+      await db.set({
           postAuthor: session.user.name,
           path: "/cidProfile",
           profileImg: session.user.image,
@@ -29,17 +25,8 @@ export default function CreatePostButton(props) {
           shareCount: 0,
           sharable: props.shareable,
         }).then(alert('Your Post was Sent!'))
-      } catch (error) {
-        console.log(error)
-        alert(error)
-      }
     } else {
-        try {
-          firebase
-          .firestore()
-          .collection('postData')
-          .doc()
-          .set({
+        await db.set({
             postAuthor: session.user.name,
             path: "/cidProfile",
             profileImg: session.user.image,
@@ -51,10 +38,6 @@ export default function CreatePostButton(props) {
             shareCount: 0,
             sharable: props.shareable,
           }).then(alert('Your Post was Sent!'))
-        } catch (error) {
-          console.log(error)
-          alert(error)
-        }
       }
   }
 
