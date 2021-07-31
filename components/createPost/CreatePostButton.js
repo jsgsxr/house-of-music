@@ -10,7 +10,7 @@ export default function CreatePostButton(props) {
   console.log(today.toUTCString())
 
   const sendData = async() => {
-    const db = firebase.firestore().collection('postData').doc()
+    const db = firebase.firestore().collection('postData').doc(today.toUTCString())
     if (props.postContent) {  
       await db.set({
           postAuthor: session.user.name,

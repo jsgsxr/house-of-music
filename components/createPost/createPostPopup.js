@@ -15,7 +15,7 @@ export default function CreatePostPopup(props) {
 
   const handleTextInput = event => {
     setDisableButton(event.target.value)
-    setPostText({...postText, postText: event.target.value})
+    setPostText(event.target.value)
   }
   const handleFileChange = event => {
     setPostContent(event.target.files[0])
