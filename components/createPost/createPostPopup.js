@@ -72,7 +72,7 @@ export default function CreatePostPopup(props) {
           <form className={styles.createPostForm}>
             <div className={styles.popupContentProfileDiv}>
               <div className={styles.profileImgDiv}>
-                <Image className={styles.profileImg} src={props.session.user.image} width="45px" height="45px" />
+                <Image className={styles.profileImg} src={props.session.user.image} width="45px" height="45px" alt="profile" />
               </div>
               <div className={styles.popupNameWithSelectDiv}>
                 <p className={styles.userName}>{props.session.user.name}</p>

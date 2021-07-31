@@ -1,12 +1,17 @@
 import styles from '../../styles/createPost.module.css'
 import firebase from '../../firebase/initFirebase'
 import { useSession } from 'next-auth/client'
+import { useState } from 'react'
 
 export default function CreatePostButton(props) {
   const [session, loading] = useSession()
+  const [postContent, setPostContent] = useState(null)
   const time = Date.now()
   const today = new Date(time)
   console.log(today.toUTCString())
+
+  if (props.postContent) {setPostContent({postContent: props.postContent})
+} else {null}  
 
   const sendData = () => {
     try {
@@ -19,7 +24,7 @@ export default function CreatePostButton(props) {
         path: "/cidProfile",
         profileImg: session.user.image,
         postText: props.postText,
-        postContent: props.postContent.name,
+        postContent,
         postTime: today.toUTCString(),
         reactionsTotal: 1,
         isliked: false,
