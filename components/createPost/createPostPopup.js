@@ -43,14 +43,11 @@ export default function CreatePostPopup(props) {
 
   const handleDropdown = () => {
     {dropDown ? (setDropDown(false)) : (setDropDown(true))}
-    console.log(dropDown, "dropdown" )
   }
   const handleSelectPublic = () => {
     setScopeSelect("public")
     setDropDown(false)
     setShareable(true) 
-    console.log(scopeSelect)
-    console.log(shareable)
   }
   const handleSelectFriends = () => {
     setScopeSelect("friends")
