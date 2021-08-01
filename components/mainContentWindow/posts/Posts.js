@@ -5,6 +5,7 @@ const Posts = props => (
   <div className={styles.postMainDiv}>
     {props.posts && props.posts.map(button => (
       <PostsCard
+        ID={button.id}
         key={button.path}
         path={button.path}
         postAuthor={button.postAuthor}

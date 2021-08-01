@@ -9,14 +9,17 @@ import firebase from '../../firebase/initFirebase'
 export default function MainContentWindow(props) {
   const [session] = useSession()
   const [postData, setPostData] = useState([])
+  const [itemID, setItemID] = useState([])
   const [loading, setLoading] = useState(true)
 
   const fetchData = async() => {
     const response = firebase.firestore().collection("postData").orderBy("postTime", "desc")
     const data = await response.get()
     data.docs.map((item) => {
+      let posts = item.data()
+      posts.id = item.id
       console.log(item.data())
-      setPostData(postData => [...postData, item.data()])
+      setPostData(postData => [...postData, posts])
     })
   }
 

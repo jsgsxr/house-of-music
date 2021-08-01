@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../../../styles/posts.module.css'
+import firebase from '../../../firebase/initFirebase'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShareSquare, faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -8,15 +9,23 @@ import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShare
 function PostCards(props) {
   const [openComment, setOpenComment] = useState(false)
   const [isliked, setIsLiked] = useState(props.isliked)
+  let [reactions, setReactions] = useState(props.reactionsTotal)
+  let dbReacts = props.reactionsTotal
 
   const handleOpenComment = () => {
     {openComment ? (setOpenComment(false)) : (setOpenComment(true))}
     console.log(openComment);
   }
 
-  const handleLike = () => {
-    {isLiked ? (setIsLiked(false)) : (setIsLiked(true));
-    console.log("Liked?" + props.isLiked);}
+  const handleLike = async() => {
+    {isliked ? (setIsLiked(false)) : (setIsLiked(true))}
+    {!isliked ? firebase.firestore().collection("postData").doc(props.ID).update({
+      reactionsTotal: dbReacts + 1
+    }) : firebase.firestore().collection("postData").doc(props.ID).update({
+      reactionsTotal: dbReacts
+    })}
+    {!isliked ? setReactions(() => reactions + 1) : setReactions(() => reactions - 1)}
+    console.log("Liked?" + isliked)
   }
 
   return (
@@ -48,13 +57,13 @@ function PostCards(props) {
           <Image src={props.postContent} position="relative" layout='fill' objectFit='cover' alt="story" />
         </div>) : (null)}
       <div className={styles.reactionsMainDiv}>
-      {(props.reactionsTotal > 0) ? (
+      {(reactions > 0) ? (
         <div className={styles.reactionCountMainDiv}>
           <div className={styles.reactionCount}>
             <div className={styles.reactionIconsDiv}>
               <FontAwesomeIcon icon={faThumbsUp} />  
             </div>
-            <p className={styles.totalReactions}>{props.reactionsTotal}</p>
+            <p className={styles.totalReactions}>{reactions}</p>
           </div>
           <div className={styles.commentShareCountDiv}>
             {(props.commentCount > 0) ? (<p className={styles.commentCountText}>{props.commentCount} Comments</p>) : (null)}

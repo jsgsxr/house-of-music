@@ -15,7 +15,7 @@ export default function CreatePostButton(props) {
       profileImg: session.user.image,
       postText: props.postText,
       postTime: today.toUTCString(),
-      reactionsTotal: 1,
+      reactionsTotal: 0,
       isliked: false,
       commentCount: 0,
       shareCount: 0,
@@ -25,7 +25,7 @@ export default function CreatePostButton(props) {
       obj.postContent = props.postContent.name
     } 
   
-    firebase.firestore().collection("postData").add(obj).then(() => {
+    firebase.firestore().collection("postData").doc(session.user.name + time).set(obj).then(() => {
         window.location.reload()
     }).catch(err => console.log(err));
   };
