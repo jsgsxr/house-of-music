@@ -8,7 +8,7 @@
 
 .shortcutWindow {
   width: 25%;
-  min-width: 315px;
+  min-width: 290px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
 
 .mainContentWindow {
   width: 55%;
+  min-width: 605px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +65,18 @@
 }
 
 @media only screen 
-  and (max-width: 812px) {
+  and (max-width: 1100px) {
+    .shortcutWindow {
+      display: none;
+    }
+    
+    .mainContentWindow {
+      width: 100%;
+    }
+  }
+
+@media only screen 
+  and (max-width: 840px) {
     .shortcutWindow {
       display: none;
     }
