@@ -4,11 +4,15 @@ import styles from '../../../styles/posts.module.css'
 import firebase from '../../../firebase/initFirebase'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShareSquare, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShareSquare, faArrowDown, faGlobeAsia } from '@fortawesome/free-solid-svg-icons'
 
 function PostCards(props) {
+  let liked = false
+  if (props.userLikes.includes(props.session.user.name)) {
+    liked = true
+  }
   const [openComment, setOpenComment] = useState(false)
-  const [isliked, setIsLiked] = useState(props.isliked)
+  const [isliked, setIsLiked] = useState(liked)
   let [reactions, setReactions] = useState(props.reactionsTotal)
   let dbReacts = props.reactionsTotal
 
@@ -20,12 +24,14 @@ function PostCards(props) {
   const handleLike = async() => {
     {isliked ? (setIsLiked(false)) : (setIsLiked(true))}
     {!isliked ? firebase.firestore().collection("postData").doc(props.ID).update({
-      reactionsTotal: dbReacts + 1
+      reactionsTotal: dbReacts + 1,
+      userLikes: firebase.firestore.FieldValue.arrayUnion(props.session.user.name)
     }) : firebase.firestore().collection("postData").doc(props.ID).update({
-      reactionsTotal: dbReacts
+      reactionsTotal: dbReacts,
+      userLikes: firebase.firestore.FieldValue.arrayRemove(props.session.user.name)
     })}
     {!isliked ? setReactions(() => reactions + 1) : setReactions(() => reactions - 1)}
-    console.log("Liked?" + isliked)
+    console.log("Liked?" + liked)
   }
 
   return (
@@ -40,7 +46,8 @@ function PostCards(props) {
             <p className={styles.postData}>
               5h 
               <FontAwesomeIcon className={styles.dataDot} icon={faCircle} size="sm" />
-              <FontAwesomeIcon icon={faUserFriends} size="sm" />
+              {!props.sharable ? <FontAwesomeIcon icon={faUserFriends} size="sm" /> :
+              <FontAwesomeIcon icon={faGlobeAsia} size="sm" />}
             </p>
           </div>
         </div>

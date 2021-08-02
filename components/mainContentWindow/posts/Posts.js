@@ -13,7 +13,7 @@ const Posts = props => (
         postText={button.postText}
         postContent={button.postContent}
         reactionsTotal={button.reactionsTotal}
-        isliked={button.isliked}
+        userLikes={button.userLikes}
         commentCount={button.commentCount}
         shareCount={button.shareCount}
         sharable={button.sharable}
