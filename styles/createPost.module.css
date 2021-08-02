@@ -92,9 +92,7 @@
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 812px) {
     .createPostMainDiv {
       width: 95%;
       font-size: .8rem;
