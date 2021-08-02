@@ -1,4 +1,4 @@
-import styles from '../../styles/createPost.module.css'
+import styles from '../../styles/createPostPopup.module.css'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faGlobeAsia, faUserFriends, faCaretDown, faImages, faUserTag, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'

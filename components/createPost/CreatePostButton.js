@@ -1,4 +1,4 @@
-import styles from '../../styles/createPost.module.css'
+import styles from '../../styles/createPostPopup.module.css'
 import firebase from '../../firebase/initFirebase'
 import { useSession } from 'next-auth/client'
 
@@ -16,7 +16,7 @@ export default function CreatePostButton(props) {
       postText: props.postText,
       postTime: today.toUTCString(),
       reactionsTotal: 0,
-      isliked: false,
+      userLikes: [],
       commentCount: 0,
       shareCount: 0,
       sharable: props.shareable,
