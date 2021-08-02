@@ -5,6 +5,7 @@ const MenuItems = props => (
   <div className={styles.menuItemDiv}>
     {props.menuData.map(button => (
       <MenuItemCard
+        key={button.path}
         action={button.action}
         path={button.path}
         label={button.label}
