@@ -13,9 +13,6 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main className={styles.body}>{children}</main>
-      <footer>
-
-      </footer>
     </div>
   )
 }

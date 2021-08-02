@@ -17,7 +17,6 @@
 
 .mainContentWindow {
   width: 55%;
-  min-width: 605px;
   height: 100%;
   display: flex;
   flex-direction: column;

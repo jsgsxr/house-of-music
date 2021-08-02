@@ -74,7 +74,7 @@
 }
 
 @media only screen 
-  and (max-width: 896px) {
+  and (max-width: 840px) {
 
     .loginMain {
       width: 100%;

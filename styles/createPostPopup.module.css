@@ -216,7 +216,7 @@
   }
 
 @media only screen 
-  and (max-device-width: 812px) { 
+  and (max-device-width: 840px) { 
     .popupDiv {
       width: 100%;
     }

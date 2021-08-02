@@ -8,6 +8,7 @@ import ContactsWindow from '../components/contactswindow/ContactsWindow'
 import MainContentWindow from '../components/mainContentWindow/MainContentWindow'
 import CreatePostPopup from "../components/createPost/createPostPopup"
 import Home from './index'
+import Footer from '../components/footer/Footer'
 
 export default function UserHome() {
   const [session, loading] = useSession();
@@ -27,6 +28,7 @@ export default function UserHome() {
         </div>
         <div className={styles.mainContentWindow}>
           <MainContentWindow handleOpen={handleOpen} />
+          <Footer />
         </div>
         <div className={styles.contactsWindow}>
           <ContactsWindow />
