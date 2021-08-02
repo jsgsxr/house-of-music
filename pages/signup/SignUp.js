@@ -3,6 +3,7 @@ import Layout from '../../components/layouts'
 import styles from '../../styles/signup.module.css'
 import { useSession } from 'next-auth/client'
 import UserHome from '../userHome'
+import Header from '../../components/header/Header'
 
 export default function SignUp() {
   const [session, loading] = useSession();
@@ -11,7 +12,8 @@ export default function SignUp() {
     return <UserHome />
   } else {
     return (
-      <Layout>
+      <>
+      <Header />
       <div className={styles.loginMain}>
         <div className={styles.loginTitleDiv}>
           <h1 className={styles.loginTitle}>Find Musicians Near You!</h1>
@@ -28,7 +30,7 @@ export default function SignUp() {
           </Link>
         </div>
       </div>
-      </Layout>
+      </>
     )
   }
 }

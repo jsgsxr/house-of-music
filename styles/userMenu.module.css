@@ -1,0 +1,47 @@
+.menuMainDiv {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.menuItemDiv {
+  width: 95%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuCardDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuIcon {
+  font-size: 3rem;
+  margin-right: 15px;
+  color: rgb(5, 134, 255);
+}
+.signOutIcon {
+  font-size: 3rem;
+  margin-right: 15px;
+  color: green;
+}
+
+.itemDividerDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(70, 69, 69);
+}
+
+.menuItemText {
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
