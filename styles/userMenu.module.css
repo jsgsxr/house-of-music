@@ -10,10 +10,15 @@
 
 .menuItemDiv {
   width: 95%;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-radius: 15px;
+  padding: 10px
+}
+.menuItemDiv:hover {
+  background-color: rgba(70, 69, 69, 0.61);
 }
 
 .menuCardDiv {
@@ -23,8 +28,12 @@
   align-items: center;
 }
 
+.menuProfileImg {
+  border-radius: 50%;
+}
+
 .menuIcon {
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-right: 15px;
   color: rgb(5, 134, 255);
 }
@@ -44,4 +53,14 @@
 .menuItemText {
   margin-top: -5px;
   padding-bottom: 5px;
+}
+
+.menuProfileName {
+  margin-left: 15px;
+  margin-bottom: -.2rem;
+}
+
+.menuItemSubText {
+  margin-left: 15px;
+  font-size: .7rem;
 }

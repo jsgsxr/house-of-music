@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignOutAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faUsers } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import styles from '../../styles/userMenu.module.css'
 

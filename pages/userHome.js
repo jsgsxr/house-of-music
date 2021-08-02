@@ -10,7 +10,7 @@ import CreatePostPopup from "../components/createPost/createPostPopup"
 import Home from './index'
 
 export default function UserHome() {
-  const [session, loading] = useSession();
+  const [session, loading] = useSession()
   const [openPost, setOpenPost] = useState(false)
 
   const handleOpen = () => {

@@ -162,6 +162,10 @@
       align-items: center;
       justify-content: center;
     }
+    .footerActionDiv:hover {
+      background-color: rgb(75, 75, 75);
+    }
+
 
     .footerMenuText {
       text-align: center;
