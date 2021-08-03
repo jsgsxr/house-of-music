@@ -9,9 +9,9 @@ export default function MenuSignOut() {
   return (
     <Link href="/comingSoon" passHref={true}>
       <div className={styles.menuItemDiv}>
-        <Image className={styles.menuProfileImg} src={session.user.image} width="60px" height="60px" alt="profile" />
+        <Image className={styles.menuProfileImg} src={!loading ? session.user.image : null} width="60px" height="60px" alt="profile" />
         <div className={styles.itemDividerDiv}>
-          <p className={styles.menuProfileName}>{session.user.name}</p>
+          <p className={styles.menuProfileName}>{!loading ? session.user.name : null}</p>
           <p className={styles.menuItemSubText}>Edit Your Profile</p>  
         </div>
       </div>
