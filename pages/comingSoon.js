@@ -16,10 +16,10 @@ export default function ComingSoon() {
           </div>
           <div className={styles.comingSoonBody}>
             <h3 className={styles.subTitleH3}>
-              We're still getting the perfect mix for this track! 
+              Still getting the perfect mix for this track! 
             </h3>
             <p className={styles.subTitleP}>
-              Come back soon and tell us how it sounds ~
+              ~ Come back soon and tell us how it sounds ~
             </p>
           </div>
           <button className={styles.backButton} onClick={() => router.back()}>Rewind</button>
