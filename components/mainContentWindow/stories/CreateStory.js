@@ -7,7 +7,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons"
 export default function CreateStory(props) {
 
   return (
-    <Link href='/createStory' passHref={true}>
+    <Link href='/comingSoon' passHref={true}>
       <div className={styles.createStoryCard}>
         <div className={styles.createStoryContentDiv}>
           <Image className={styles.storyContent} src={props.session.user.image} position="relative" layout='fill' objectFit='cover' alt="story" />

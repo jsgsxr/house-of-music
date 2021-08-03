@@ -6,27 +6,27 @@ faUserFriends, faUsers, faShoppingCart, faVideo, faCompactDisc
 const shortcutData = [
   {
     label: "Friends",
-    path: "/friends",
+    path: "/comingSoon",
     icon: <FontAwesomeIcon icon={faUserFriends} size="2x" />,
   },
   {
     label: "Groups",
-    path: "/groups",
+    path: "/comingSoon",
     icon: <FontAwesomeIcon icon={faUsers} size="2x" />,
   },
   {
     label: "Market",
-    path: "/marketplace",
+    path: "/comingSoon",
     icon: <FontAwesomeIcon icon={faShoppingCart} size="2x" />,
   },
   {
     label: "Watch",
-    path: "/watch",
+    path: "/comingSoon",
     icon: <FontAwesomeIcon icon={faVideo} size="2x" />,
   },
   {
     label: "Listen",
-    path: "/listen",
+    path: "/comingSoon",
     icon: <FontAwesomeIcon icon={faCompactDisc} size="2x" />,
   }
 ]

@@ -38,9 +38,11 @@ function PostCards(props) {
     <div className={styles.postCard}>
       <div className={styles.postHeaderDiv}>
         <div className={styles.postHeaderInfoDiv}>
+          <Link href="/comingSoon" passHref={true}> 
             <Image className={styles.postProfileImg} src={props.profileImg} width="40px" height="40px" alt="profile" /> 
+          </Link>
           <div className={styles.postHeaderInfo}>
-            <Link href="/authorProfile" passHref={true}>  
+            <Link href="/comingSoon" passHref={true}>  
               <p className={styles.postAuthor}>{props.postAuthor}</p>
             </Link>  
             <p className={styles.postData}>

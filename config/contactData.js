@@ -1,37 +1,37 @@
 const contactData = [
     {
       label: "Sephiroth",
-      path: "/sephProfile",
+      path: "/comingSoon",
       profileImg: '/images/sephiroth.jpeg',
     },
     {
       label: "Tifa Lockheart",
-      path: "/tifaProfile",
+      path: "/comingSoon",
       profileImg: '/images/tifa.jpeg',
     },
     {
       label: "Vincent Valentine",
-      path: "/vincentProfile",
+      path: "/comingSoon",
       profileImg: '/images/vincent.jpeg',
     },
     {
       label: "Aeris Gainsborough",
-      path: "/aerisProfile",
+      path: "/comingSoon",
       profileImg: '/images/aeris.jpeg',
     },
     {
       label: "Yuffie Kisaragi",
-      path: "/yuffieProfile",
+      path: "/comingSoon",
       profileImg: '/images/yuffie.jpeg',
     },
     {
       label: "Barret",
-      path: "/barretProfile",
+      path: "/comingSoon",
       profileImg: '/images/barret.jpeg',
     },
     {
       label: "Cid Highwind",
-      path: "/cidProfile",
+      path: "/comingSoon",
       profileImg: '/images/cid.jpeg',
     },
   ]

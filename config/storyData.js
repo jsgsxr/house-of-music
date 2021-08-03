@@ -1,25 +1,25 @@
 const storyData = [
     {
       label: "Sephiroth",
-      path: "/sephProfile",
+      path: "/comingSoon",
       profileImg: '/images/sephiroth.jpeg',
       storyContent: '/images/cloudsephfight.jpeg',
     },
     {
       label: "Tifa Lockheart",
-      path: "/tifaProfile",
+      path: "/comingSoon",
       profileImg: '/images/tifa.jpeg',
       storyContent: '/images/cloudtifapose.jpeg',
     },
     {
       label: "Vincent Valentine",
-      path: "/vincentProfile",
+      path: "/comingSoon",
       profileImg: '/images/vincent.jpeg',
       storyContent: '/images/auronvincentpose.jpeg',
     },
     {
       label: "Aeris Gainsborough",
-      path: "/aerisProfile",
+      path: "/comingSoon",
       profileImg: '/images/aeris.jpeg',
       storyContent: '/images/aerisdress.jpg',
     },

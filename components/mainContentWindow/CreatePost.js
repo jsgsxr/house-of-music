@@ -17,19 +17,19 @@ export default function CreatePost(props) {
       </div>
       <div className={styles.createPostDivider} />
       <div className={styles.createPostAddons}>
-        <Link href="/liveVideo" passHref={true}>
+        <Link href="/comingSoon" passHref={true}>
           <div className={styles.createAddonDiv}>
             <FontAwesomeIcon className={styles.videoIcon} icon={faVideo} size="lg" />
             <p className={styles.createAddonLabel}>Live Video</p>
           </div>
         </Link>
-        <Link href="/photoVideo" passHref={true}>
+        <Link href="/comingSoon" passHref={true}>
           <div className={styles.createAddonDiv}>
             <FontAwesomeIcon className={styles.photoIcon} icon={faPhotoVideo} size="lg" />  
             <p className={styles.createAddonLabel}>Photo/Video</p>
           </div>
         </Link>
-        <Link href="/bandPractice" passHref={true}>
+        <Link href="/comingSoon" passHref={true}>
           <div className={styles.createAddonDiv}>
             <FontAwesomeIcon className={styles.guitarIcon} icon={faGuitar} size="lg" />
             <p className={styles.createAddonLabel}>Band Practice</p>
