@@ -9,12 +9,12 @@ export default function Footer() {
 
   return (
     <footer className={styles.footerMainDiv}> 
-      <Link href="/userHome" passHref={true}>
-        <div className={router.pathname == '/userHome' ? styles.activeActionDiv : styles.footerActionDiv}>
+      {/* <Link href="/userHome" passHref={true}> */}
+        <div className={router.pathname == '/userHome' ? styles.activeActionDiv : styles.footerActionDiv} onClick={() => router.push('/userHome')}>
           <FontAwesomeIcon className={styles.footerIcon} icon={faHome} size='2x' />
           <p className={styles.footerMenuText}>User Home</p>
         </div>
-      </Link>
+      {/* </Link> */}
       <Link href='/userHome' passHref={true}>
         <div className={router.pathname == '/watch' ? styles.activeActionDiv : styles.footerActionDiv}>
           <FontAwesomeIcon className={styles.footerIcon} icon={faTv} size='2x' />
@@ -27,12 +27,12 @@ export default function Footer() {
           <p className={styles.footerMenuText}>Notifications</p>
         </div> 
       </Link>
-      <Link href='/userMenu' passHref={true}>
-        <div className={router.pathname == '/userMenu' ? styles.activeActionDiv : styles.footerActionDiv}>
+      {/* <Link href='/userMenu' passHref={true}> */}
+        <div className={router.pathname == '/userMenu' ? styles.activeActionDiv : styles.footerActionDiv} onClick={() => router.push("/userMenu") }>
           <FontAwesomeIcon className={styles.footerIcon} icon={faBars} size='2x' />
           <p className={styles.footerMenuText}>Menu</p>
         </div>
-      </Link>
+      {/* </Link> */}
     </footer>
   )
 }
