@@ -219,10 +219,11 @@
   and (max-device-width: 840px) { 
     .popupDiv {
       width: 100%;
+      margin-top: -30px;
     }
 
     .popupTitle {
-      padding-left: 37%;
+      padding-left: 33%;
     }
 
     .addonIconsDiv {
