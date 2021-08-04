@@ -5,6 +5,7 @@ import firebase from '../../../firebase/initFirebase'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faUserFriends, faEllipsisH, faThumbsUp, faCommentAlt, faShareSquare, faArrowDown, faGlobeAsia } from '@fortawesome/free-solid-svg-icons'
+import Comments from './comments/Comments'
 
 function PostCards(props) {
   let liked = false
@@ -13,12 +14,15 @@ function PostCards(props) {
   }
   const [openComment, setOpenComment] = useState(false)
   const [isliked, setIsLiked] = useState(liked)
+  const [commentText, setCommentText] = useState("")
+  const time = Date.now()
+  const today = new Date(time)
   let [reactions, setReactions] = useState(props.reactionsTotal)
   let dbReacts = props.reactionsTotal
 
   const handleOpenComment = () => {
     {openComment ? (setOpenComment(false)) : (setOpenComment(true))}
-    console.log(openComment);
+    console.log(openComment)
   }
 
   const handleLike = async() => {
@@ -32,6 +36,29 @@ function PostCards(props) {
     })}
     {!isliked ? setReactions(() => reactions + 1) : setReactions(() => reactions - 1)}
     console.log("Liked?" + liked)
+  }
+
+  const handleTextInput = event => {
+    setCommentText(event.target.value)
+  }
+
+  const handleEnterKey = async(event) => {
+    if (event.keyCode === 13) {
+      firebase.firestore().collection("postData").doc(props.ID).update({
+        commentData: firebase.firestore.FieldValue.arrayUnion({
+          commentIMG: props.session.user.image,
+          commentLikes: [],
+          commentName: props.session.user.name,
+          commentText: commentText,
+          commentTime: today.toUTCString(),
+          path: props.session.user.name,
+          reactionsTotal: 0,
+        }),
+        commentCount: props.commentCount + 1
+      }).then(() => {
+        window.location.reload()
+      })
+    }
   }
 
   return (
@@ -87,7 +114,7 @@ function PostCards(props) {
                 <p className={styles.reactActionText}>Like</p>
               </div>
             </div> 
-            <div className={styles.reactActionDiv}>
+            <div className={styles.reactActionDiv} onClick={handleOpenComment}>
               <FontAwesomeIcon icon={faCommentAlt} />
               <p className={styles.reactActionText}>Comment</p>
             </div>
@@ -104,9 +131,10 @@ function PostCards(props) {
         </div>
         {openComment ? (<div className={styles.commentBorderDiv} />) : (null)}
         {openComment ? (<div className={styles.commentsMainDiv}>
+          <Comments commentCount={props.commentCount} commentData={props.commentData} />
           <div className={styles.commentsHeader}>
             <Image className={styles.userProfileImg} src={props.session.user.image} width="35px" height="35px" alt="profile" />
-            <input className={styles.commentInput} id="comment" name="comment" placeholder="Write a comment. . ." />
+            <input className={styles.commentInput} id="comment" name="comment" placeholder="Write a comment. . ." onKeyDown={handleEnterKey} onChange={handleTextInput} />
           </div>
         </div>) : (null)}
       </div>
@@ -114,4 +142,4 @@ function PostCards(props) {
   )
 }
     
-export default PostCards;
+export default PostCards

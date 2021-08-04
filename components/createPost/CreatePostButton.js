@@ -18,6 +18,7 @@ export default function CreatePostButton(props) {
       reactionsTotal: 0,
       userLikes: [],
       commentCount: 0,
+      commentData: [],
       shareCount: 0,
       sharable: props.shareable,
     };

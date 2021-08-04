@@ -15,6 +15,7 @@ const Posts = props => (
         reactionsTotal={button.reactionsTotal}
         userLikes={button.userLikes}
         commentCount={button.commentCount}
+        commentData={button.commentData}
         shareCount={button.shareCount}
         sharable={button.sharable}
         session={props.session}

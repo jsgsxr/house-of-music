@@ -1,0 +1,64 @@
+.commentsMainDiv {
+  width: 92%;
+}
+
+.moreCommentsLink {
+  width: 92%;
+  font-size: .95rem;
+  margin-top: -.1rem;
+}
+.moreCommentsLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.commentCardMainDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.commentImg {
+  border-radius: 50%;
+}
+
+.commentColumnDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.commentContentDiv {
+  background-color: rgb(61, 61, 61);
+  border-radius: 15px;
+  height: 100%;
+  font-size: .95rem;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentAuthor {
+  font-size: .88rem;
+}
+.commentAuthor:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.commentText {
+  margin-top: -5px;
+}
+
+.commentReactionDiv {
+  font-size: .82rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: -11px;
+}
+
+.dotIcon {
+  font-size: .2rem;
+  margin: 0 7px;
+}

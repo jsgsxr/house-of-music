@@ -223,6 +223,16 @@
   padding-top: 3%;
 }
 
+.moreCommentsLink {
+  width: 92%;
+  font-size: .95rem;
+  margin-top: -.1rem;
+}
+.moreCommentsLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .commentsHeader {
   width: 92%;
   display: flex;
