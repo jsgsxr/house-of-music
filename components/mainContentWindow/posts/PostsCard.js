@@ -17,8 +17,8 @@ function PostCards(props) {
   const [commentText, setCommentText] = useState("")
   const time = Date.now()
   const today = new Date(time)
-  let [reactions, setReactions] = useState(props.reactionsTotal)
-  let dbReacts = props.reactionsTotal
+  let [reactions, setReactions] = useState(props.userLikes.length)
+  let dbCommentCount = props.commentCount
 
   const handleOpenComment = () => {
     {openComment ? (setOpenComment(false)) : (setOpenComment(true))}
@@ -28,10 +28,10 @@ function PostCards(props) {
   const handleLike = async() => {
     {isliked ? (setIsLiked(false)) : (setIsLiked(true))}
     {!isliked ? firebase.firestore().collection("postData").doc(props.ID).update({
-      reactionsTotal: dbReacts + 1,
+      reactionsTotal: reactions + 1,
       userLikes: firebase.firestore.FieldValue.arrayUnion(props.session.user.name)
     }) : firebase.firestore().collection("postData").doc(props.ID).update({
-      reactionsTotal: dbReacts,
+      reactionsTotal: reactions,
       userLikes: firebase.firestore.FieldValue.arrayRemove(props.session.user.name)
     })}
     {!isliked ? setReactions(() => reactions + 1) : setReactions(() => reactions - 1)}
@@ -45,6 +45,7 @@ function PostCards(props) {
   const handleEnterKey = async(event) => {
     if (event.keyCode === 13) {
       firebase.firestore().collection("postData").doc(props.ID).update({
+        commentCount: (dbCommentCount || 0) + 1,
         commentData: firebase.firestore.FieldValue.arrayUnion({
           commentIMG: props.session.user.image,
           commentLikes: [],
@@ -53,8 +54,7 @@ function PostCards(props) {
           commentTime: today.toUTCString(),
           path: props.session.user.name,
           reactionsTotal: 0,
-        }),
-        commentCount: props.commentCount + 1
+        })
       }).then(() => {
         window.location.reload()
       })
@@ -131,7 +131,7 @@ function PostCards(props) {
         </div>
         {openComment ? (<div className={styles.commentBorderDiv} />) : (null)}
         {openComment ? (<div className={styles.commentsMainDiv}>
-          <Comments commentCount={props.commentCount} commentData={props.commentData} />
+          <Comments commentCount={props.commentCount} commentData={props.commentData} session={props.session} ID={props.ID} />
           <div className={styles.commentsHeader}>
             <Image className={styles.userProfileImg} src={props.session.user.image} width="35px" height="35px" alt="profile" />
             <input className={styles.commentInput} id="comment" name="comment" placeholder="Write a comment. . ." onKeyDown={handleEnterKey} onChange={handleTextInput} />

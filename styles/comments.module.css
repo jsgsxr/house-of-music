@@ -58,6 +58,11 @@
   margin-top: -11px;
 }
 
+.commentLike:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .dotIcon {
   font-size: .2rem;
   margin: 0 7px;
