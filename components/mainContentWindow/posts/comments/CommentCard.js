@@ -26,20 +26,22 @@ export default function CommentCard(props) {
           <p className={styles.commentAuthor}>{props.commentName}</p>
           <p className={styles.commentText}>{props.commentText}</p>
         </div>
-        <div className={styles.commentReactionDiv}>
-          <p className={styles.commentLike} onClick={handleCommentLike}>Like</p>
-          <FontAwesomeIcon className={styles.dotIcon} icon={faCircle} />
-          <p className={styles.commentReply}>Reply</p>
-          <FontAwesomeIcon className={styles.dotIcon} icon={faCircle} />
-          <p className={styles.commentTime}>9h</p>
-        </div>
-        {(props.commentLikes.length > 0) ? (
-        <div className={styles.reactionBubble}>
-          <div className={styles.likeIconDiv}>
-            <FontAwesomeIcon icon={faThumbsUp} />
+        <div className={styles.reactionMainDiv}>
+          <div className={styles.commentReactionDiv}>
+            <p className={styles.commentLike} onClick={handleCommentLike}>Like</p>
+            <FontAwesomeIcon className={styles.dotIcon} icon={faCircle} />
+            <p className={styles.commentReply}>Reply</p>
+            <FontAwesomeIcon className={styles.dotIcon} icon={faCircle} />
+            <p className={styles.commentTime}>9h</p>
           </div>
-          <p className={styles.likeCountNumber}>{likeTotal}</p>
-        </div> ) : null}
+          {(props.commentLikes.length > 0) ? (
+          <div className={styles.reactionBubble}>
+            <div className={styles.likeIconDiv}>
+              <FontAwesomeIcon icon={faThumbsUp} />
+            </div>
+            <p className={styles.likeCountNumber}>{likeTotal}</p>
+          </div> ) : null}
+        </div>
       </div>
     </div>
   )
